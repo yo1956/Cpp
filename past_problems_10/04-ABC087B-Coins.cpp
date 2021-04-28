@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long ll;
+
 #define rep(i, n)     for (int i = 0; i < (int)(n); ++i)
+#define rep_e(i, n)   for (int i = 0; i <= (int)(n); ++i)
 #define rep1(i, n)    for (int i = 1; i < (int)(n); ++i)
 #define rep2(i, s, n) for (int i = s; i < (int)(n); ++i)
+#define repll(i, n)   for (ll i = 0; i < (ll)(n); ++i)
 
 template <typename T> bool chmax(T& a, const T& b); // aよりもbが大きいならばaをbで更新する // 更新されたならばtrueを返す
 template <typename T> bool chmin(T& a, const T& b); // aよりもbが小さいならばaをbで更新する // 更新されたならばtrueを返す
@@ -12,16 +16,35 @@ template <typename T> bool chmin(T& a, const T& b); // aよりもbが小さい�
 
 int main() {
 	
-	int N;
-	vector<int> A;
+	int X,A,B,C;
+	cin >> A >> B >> C >> X;
+	// cin >> A;
+	// cin >> B;
+	// cin >> C;
+	// cin >> X;
+	int cnt=0;
 
-	cin >> N;
-
-	int input = 0;
-	for (int i = 0; i < N; ++i) {
-		cin >> input;
-		A.push_back(input);
+	rep_e(i,A){
+		rep_e(j,B){
+			rep_e(k,C){
+				if(i*500 + j*100 + k*50 == X)
+					cnt++;
+			}
+		}
 	}
+
+	cout << cnt << endl;
+
+	// repll(bitA, (bitA << A)){
+	// 	repll(bitB, (bitB << B)){
+	// 		repll(bitC, (bitC << B)){
+
+	// 		}
+	// 	}
+
+	// }
+
+
 
 	
 		
