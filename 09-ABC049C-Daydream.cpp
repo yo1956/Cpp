@@ -17,9 +17,39 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 int main() {
 
-	int S;
+	string S; 
 	cin >> S;
-	
+
+	string T = "";
+	vector<string> strs{"dream", "dreamer", "erase", "eraser"};
+
+	// if(S[0] != 'e' | S[0] != 'd')
+	// 	cout << "NO" << endl;
+
+	reverse(S.begin(), S.end());
+	for (int i = 0; i < strs.size(); ++i){
+		reverse(strs[i].begin(), strs[i].end());
+	}
+
+	// bool can = false;
+	for (int i = 0; i < S.size(); ){
+		bool can2 = false;
+		for (int j = 0; j < strs.size(); ++j){
+			if(strs[j] == S.substr(i, strs[j].size())){
+				i += strs[j].size();
+				can2 = true;
+			}
+			if(can2 == true)
+				break;
+		}
+		
+		if(can2 == false){
+			cout << "NO" << endl;
+			return 0;
+		}
+	}
+
+	cout << "YES" << endl;
 
 	return 0;
 }
