@@ -14,5 +14,6 @@ int main(){
     str0 = str0.substr(5); //取り出す長さを省略すると指定した位置から最後までの文字列を取得
     cout << str0 << endl; //fghijklmn
     //----------------------------------------------------------------------------------------------------------//
-
+    //string→int // stoi(string s)
+    //string→long long // stoll(string s)
 }
