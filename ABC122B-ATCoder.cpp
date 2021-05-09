@@ -17,11 +17,11 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 int main() {
 
-	string S; 
-	cin >> S;
+	
 
-
+	
 	return 0;
+
 }
 
 
