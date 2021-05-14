@@ -17,9 +17,46 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 int main() {
 
-	
+	string S;
+	cin >> S;
 
-	
+	for (int i = 0; i < S.size(); ++i){
+		if(S[i] == 'A' | S[i] == 'C' | S[i] == 'G' | S[i] == 'T'){
+			break;
+		}
+		if(i == S.size()-1){
+			cout << 0 << endl;
+			return 0;
+		}
+	}
+
+
+	int count = 0;
+	for (int i = 0; i < S.size(); ++i)
+	{
+		for (int j = 0; j <= S.size() - i; ++j)
+		{
+
+			string s_eval = S.substr(i,j);
+			// string s_eval2 = s_eval.substr(0,j);
+			bool flag = true;
+			for (int k = 0; k < s_eval.size(); ++k)
+			{
+				if (s_eval[k] != 'A' && s_eval[k] != 'C' && s_eval[k] != 'G' && s_eval[k] != 'T')
+				{
+					flag = false;
+					break;
+				}
+			}
+			if(flag == false)
+				break;
+
+			chmax(count, (int)s_eval.size());
+		}
+	}
+
+	cout << count << endl;
+
 	return 0;
 
 }
