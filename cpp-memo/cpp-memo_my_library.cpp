@@ -16,6 +16,7 @@ int numDivisors(ll N);                              //Nの約数の数を返す 
 int modPow(ll a, ll n, ll p);						//a^n を p で割った余りを求る //繰り返し二乗法
 int calcFactorial(int num);							//numの階乗を計算する
 ll nCr(ll n, ll r);									//二項係数nCrを求める
+vector<pair<ll, ll>> prime_factorize(ll N);         //素因数分解し、(素因数、指数)のpair型のvectorを返す //O(√N)
 
 //文字列系
 int ctoi(char c);								    //charからintへの範囲チェック付き変換関数 //数字以外が渡されたなら0を返す
@@ -143,6 +144,28 @@ ll nCr(ll n, ll r)
 	if (n < 0 || r < 0)
 		return 0;
 	return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD;
+}
+
+//素因数分解し、(素因数、指数)のpair型のvectorを返す //O(√N)
+vector<pair<ll, ll> > prime_factorize(ll N) {
+    vector<pair<ll, ll> > res;
+    for (ll a = 2; a * a <= N; ++a) {
+        if (N % a != 0) continue;
+        ll ex = 0; // 指数
+
+        // 割れる限り割り続ける
+        while (N % a == 0) {
+            ++ex;
+            N /= a;
+        }
+
+        // その結果を push
+        res.push_back({a, ex});
+    }
+
+    // 最後に残った数について
+    if (N != 1) res.push_back({N, 1});
+    return res;
 }
 //-----------------------------------------------------------------------------------------------------//
 
