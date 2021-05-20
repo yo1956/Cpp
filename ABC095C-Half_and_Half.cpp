@@ -19,6 +19,30 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 int main() {
 
+	int a, b, c, x, y;
+	cin >> a >> b >> c >> x >> y;
+	int ans1 = c * max(x, y) * 2;
+	int ans2 = c * min(x, y) * 2 + (max(x, y) - min(x, y)) * ((x > y) ? a : b);
+	int ans3 = a * x + b * y;
+
+	cout << min({ans1, ans2, ans3}) << endl;
+
+	/*   ↓だと1つだけWAするテストケースがあったけどなぜ？ */
+
+	// //組み替えた方が良い場合
+	// if(2 * c < a + b){
+	// 	if((2 * c < a) || (2 * c < b)){ //さらにこのどちらかの場合は全部ABピザを買えばよい
+	// 		cout << c * max(x, y) * 2 << endl;
+	// 	}
+	// 	else{ //ABピザで補えなかった枚数は買い足す
+	// 		cout << c * min(x, y) * 2 + (max(x, y) - min(x, y)) * ((x > y) ? a : b) << endl;
+	// 	}
+	// }
+	// else{ //普通にA,Bピザのみで揃えた方がいい場合
+	// 	cout << a * x + b * y << endl;
+	// }
+	
+	
 	return 0;
 
 }
