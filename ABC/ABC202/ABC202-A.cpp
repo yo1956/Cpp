@@ -18,6 +18,11 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 
 int main() {
+	
+	int a , b, c;
+	cin >> a >> b >> c;
+
+	cout << (7 - a) + (7 - b) + (7 - c) << endl;
 
 	return 0;
 

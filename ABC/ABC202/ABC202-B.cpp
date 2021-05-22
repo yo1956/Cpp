@@ -18,7 +18,20 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 
 int main() {
+	
+	string s;
+	cin >> s;
 
+	reverse(s.begin(), s.end());
+	
+	for(auto&& i: s){
+	   if(i == '6')
+		   i = '9';
+	   else if(i == '9')
+		   i = '6';
+	}
+
+	cout << s << endl;
 	return 0;
 
 }

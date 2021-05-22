@@ -19,6 +19,38 @@ template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいな
 
 int main() {
 
+	int n;
+	cin >> n;
+
+	vector<int> a(n);
+	vector<int> b(n);
+	vector<int> c(n);
+	for (int i = 0; i < n; ++i){
+		cin >> a[i];
+		a[i]--;
+	}
+	for (int i = 0; i < n; ++i){
+		cin >> b[i];
+		b[i]--;
+	}
+	for (int i = 0; i < n; ++i){
+		cin >> c[i];
+		c[i]--;
+	}
+
+
+	vector<int> count(n);
+	for (int j = 0; j < n; ++j){
+		count[b[c[j]]]++;
+	}
+
+	ll ans = 0;
+	for (int i = 0; i < n; ++i){
+		ans += count[a[i]];
+	}
+
+	cout << ans << endl;
+
 	return 0;
 
 }
