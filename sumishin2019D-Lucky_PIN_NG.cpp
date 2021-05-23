@@ -28,7 +28,20 @@ int main() {
 	cin >> n;
 	cin >> s;
 
-	//含まれる数の順列を求めればよい？
+	int si = stoi(s);
+	set<int> pin_count;
+	for (int bit = 0; bit < (1 << n); ++bit){
+		int count_one
+		for (int i = 0; i < n; ++i){
+			if()
+		}
+		// int binary_digits = (int)ceil(log2(bit));
+		// bitset<binary_digits>
+		// if(numDigits(bit) == n-3)
+		// 	pin_count.insert(bit);
+	}
+
+	cout << pin_count.size() << endl;
 
 	return 0;
 

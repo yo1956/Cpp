@@ -2,7 +2,11 @@
 using namespace std;
 typedef long long ll;
 #define MOD 1000000007
-
+#define rep(i, n)      for (int i = 0; i < (int)(n); ++i)
+#define rep_e(i, n)    for (int i = 0; i <= (int)(n); ++i)
+#define rep1(i, n)     for (int i = 1; i < (int)(n); ++i)
+#define rep1_e(i, n)   for (int i = 1; i <= (int)(n); ++i)
+#define rep_s(i, s, n) for (int i = s; i < (int)(n); ++i)
 template <typename T> bool chmax(T& a, const T& b); //aよりもbが大きいならばaをbで更新する //更新されたならばtrueを返す
 template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいならばaをbで更新する //更新されたならばtrueを返す
 

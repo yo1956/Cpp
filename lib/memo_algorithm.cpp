@@ -9,8 +9,13 @@ typedef long long ll;
 #define rep1(i, n)     for (int i = 1; i < (int)(n); ++i)
 #define rep1_e(i, n)   for (int i = 1; i <= (int)(n); ++i)
 #define rep_s(i, s, n) for (int i = s; i < (int)(n); ++i)
-#define rep_v(i, v)    for (int i = 0; i < (int)(v.size()); ++i)
 #define repll(i, n)    for (ll i = 0; i < (ll)(n); ++i)
+
+// #define rep(i, n)      for (ll i = 0; i < (ll)(n); ++i)
+// #define rep_e(i, n)    for (ll i = 0; i <= (ll)(n); ++i)
+// #define rep1(i, n)     for (ll i = 1; i < (ll)(n); ++i)
+// #define rep1_e(i, n)   for (ll i = 1; i <= (ll)(n); ++i)
+// #define rep_s(i, s, n) for (ll i = s; i < (ll)(n); ++i)
 
 using namespace std;
 

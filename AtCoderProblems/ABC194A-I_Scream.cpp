@@ -10,25 +10,23 @@ typedef long long ll;
 template <typename T> bool chmax(T& a, const T& b); //aよりもbが大きいならばaをbで更新する //更新されたならばtrueを返す
 template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいならばaをbで更新する //更新されたならばtrueを返す
 
-//桁数を求める
-template <typename T>
-int numDigits(T num){
-	int ans = 0;
-	while(num != 0){
-		num /= 10;
-		ans++;
-	}
-	return ans;
-}
 
 int main() {
 
-	int n;
-	string s;
-	cin >> n;
-	cin >> s;
+	int a, b;
+	cin >> a >> b;
 
-	//含まれる数の順列を求めればよい？
+	int ans = 0;
+	if(a + b >= 15 && b >= 8)
+		ans = 1;
+	else if(a + b >= 10 && b >= 3)
+		ans = 2;
+	else if(a + b >= 3)
+		ans = 3;
+	else
+		ans = 4;
+
+	cout << ans << endl;
 
 	return 0;
 
