@@ -5,10 +5,10 @@
 typedef long long ll;
 #define MOD 1000000007
 #define rep(i, n)      for (int i = 0; i < (int)(n); ++i)
-#define rep_e(i, n)    for (int i = 0; i <= (int)(n); ++i)
+// #define rep_e(i, n)    for (int i = 0; i <= (int)(n); ++i)
 #define rep1(i, n)     for (int i = 1; i < (int)(n); ++i)
-#define rep1_e(i, n)   for (int i = 1; i <= (int)(n); ++i)
-#define rep_s(i, s, n) for (int i = s; i < (int)(n); ++i)
+// #define rep1_e(i, n)   for (int i = 1; i <= (int)(n); ++i)
+#define reps(i, s, n) for (int i = s; i < (int)(n); ++i)
 #define repll(i, n)    for (ll i = 0; i < (ll)(n); ++i)
 
 // #define rep(i, n)      for (ll i = 0; i < (ll)(n); ++i)
