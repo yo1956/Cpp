@@ -20,11 +20,16 @@ int main()
     //方法2
     map<int, ll>::iterator itr = mp.begin();
 	while(itr != mp.end()){
-	 	ans -= itr->second * (itr->second - 1) / 2; //itr->secondで、keyで回してる時のvalue値を取得できる
+	 	ans -= itr->second * (itr->second - 1) / 2; //itr->secondで、value値を取得できる //itr->firstで、key値取得
 		++itr;
 	}
-
+    
     //方法3
+    for (auto itr = mp.begin(); itr != mp.end(); itr++){
+	 	ans -= itr->second * (itr->second - 1) / 2; //itr->secondで、value値を取得できる //itr->firstで、key値取得
+    }
+
+    //方法4
     ll ans = 0;
     vector<int> a(n);
     for(int i=0; i < n; i++) mp[a[i]]++;
