@@ -6,8 +6,8 @@ using ll = long long;
 #define rep(i, n)      for (int i = 0; i < (int)(n); ++i)
 #define rep1(i, n)     for (int i = 1; i < (int)(n); ++i)
 #define reps(i, s, n) for (int i = s; i < (int)(n); ++i)
-template <typename T> bool chmax(T& a, const T& b); //aよりもbが大きいならばaをbで更新する //更新されたならばtrueを返す
-template <typename T> bool chmin(T& a, const T& b); //aよりもbが小さいならばaをbで更新する //更新されたならばtrueを返す
+template <typename T> bool chmax(T& a, const T& b); 
+template <typename T> bool chmin(T& a, const T& b);
 
 
 int main() {
@@ -16,10 +16,6 @@ int main() {
 
 }
 
-
-
-// aよりもbが大きいならばaをbで更新する
-// (更新されたならばtrueを返す)
 template <typename T>
 bool chmax(T & a, const T & b) {
 	if (a < b) {
@@ -28,8 +24,6 @@ bool chmax(T & a, const T & b) {
 	}
 	return false;
 }
-// aよりもbが小さいならばaをbで更新する
-// (更新されたならばtrueを返す)
 template <typename T>
 bool chmin(T& a, const T& b) {
 	if (a > b) {
