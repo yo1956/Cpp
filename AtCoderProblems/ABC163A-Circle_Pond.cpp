@@ -9,15 +9,13 @@ using ll = long long;
 template <typename T> bool chmax(T& a, const T& b); 
 template <typename T> bool chmin(T& a, const T& b);
 
+
 int main() {
 
-	int s, w;
-	cin >> s >> w;
-	
-	if(w >= s)
-		cout << "unsafe" << endl;
-	else
-		cout << "safe" << endl;
+	double R;
+	cin >> R;
+
+	cout << 2 * R * M_PI << endl;
 
 	return 0;
 
