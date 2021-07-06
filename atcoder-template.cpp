@@ -6,29 +6,13 @@ using ll = long long;
 #define rep(i, n)     for (int i = 0; i < (int)(n); ++i)
 #define rep1(i, n)    for (int i = 1; i < (int)(n); ++i)
 #define reps(i, s, n) for (int i = s; i < (int)(n); ++i)
-template <typename T> bool chmax(T& a, const T& b); 
-template <typename T> bool chmin(T& a, const T& b);
+template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } return 0; }
+template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
+//---------------------------------------------------------------------------------------------------
 
 
 int main() {
 
 	return 0;
 
-}
-
-template <typename T>
-bool chmax(T & a, const T & b) {
-	if (a < b) {
-		a = b;  // aをbで更新
-		return true;
-	}
-	return false;
-}
-template <typename T>
-bool chmin(T& a, const T& b) {
-	if (a > b) {
-		a = b;  // aをbで更新
-		return true;
-	}
-	return false;
 }
